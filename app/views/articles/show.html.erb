@@ -1,0 +1,13 @@
+<div class="ml-4 mt-4">
+
+<h2> <%= @article.title %> </h2>
+<ul>
+  <li><%= @article.content %> </li>
+</ul>
+
+<%= link_to "All articles", '/articles' %>
+
+
+<p><%= link_to "Edit task", edit_article_path %></p>
+
+</div>

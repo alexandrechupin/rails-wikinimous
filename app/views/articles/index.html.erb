@@ -1,0 +1,24 @@
+<div class="ml-4 mt-4">
+
+<h1>All my articles </h1>
+
+<div class="mb-10">
+  <ul class="mt-4">
+  <% @articles.each do |element| %>
+    <li>
+     <%= link_to element.title, article_path(element) %>
+    <%= element.content %>
+    <%= link_to "Delete", article_path(element),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+  </li>
+  <% end %>
+  </ul>
+
+<%= link_to "New article", new_article_path %>
+
+
+
+
+
+</div>
